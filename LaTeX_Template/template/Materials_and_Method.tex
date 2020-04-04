@@ -1,0 +1,125 @@
+\section{Materials and Methods}
+
+\blindtext % remove
+
+
+\subsection{Subsection}
+
+\blindtext %remove
+
+\subsubsection{Subsubsection}
+
+Bulleted lists:
+\begin{itemize}[leftmargin=*,labelsep=5.8mm]
+\item	First bullet
+\item	Second bullet
+\item	Third bullet
+\end{itemize}
+
+Numbered lists:
+\begin{enumerate}[leftmargin=*,labelsep=4.9mm]
+\item	First item 
+\item	Second item
+\item	Third item
+\end{enumerate}
+
+\blindtext %remove
+
+\subsection{Equation}
+
+The mass-energy equivalence is described by the famous Equation \ref{Equation:emc2} discovered in 1905 by Albert Einstein.
+
+\begin{equation}
+\label{Equation:emc2}
+E=mc^2
+\end{equation}
+
+ 
+More information can be found in \url{https://www.overleaf.com/learn/latex/mathematical_expressions}. A list of the Greek letters and math symbols can be found in \url{https://www.overleaf.com/learn/latex/List_of_Greek_letters_and_math_symbols}.
+
+\subsection{Matrices}
+
+Matrix with square brackets is shown in the Equation \ref{Equation:brackets_matrix}. Other examples of matrices can be found in \url{https://www.overleaf.com/learn/latex/Matrices}.
+
+\begin{equation}
+\label{Equation:brackets_matrix}
+\begin{bmatrix}
+1 & 2 & 3\\
+a & b & c
+\end{bmatrix}
+\end{equation}
+
+
+\subsection{Chemistry Formulae}
+
+The template include the chemfig package, more information about this package can be found in \url{https://www.overleaf.com/learn/latex/Chemistry_formulae}. The branched molecule is describe in Figure \ref{Figure:branched_molecule}.
+
+
+\begin{figure}[H]
+\label{Figure:branched_molecule}
+\centering
+\chemfig{H-C(-[2]H)(-[6]H)-C(=[1]O)-[7]H}
+\caption{Branched molecule.}
+\end{figure}
+
+
+
+
+
+
+\subsection{Algorithm}
+
+If you need information about this package, please see \url{http://ctan.dcc.uchile.cl/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf}. Algorithms should be placed in the main text near to the first time they are cited. The algorithm \ref{algorithm:example} is cited here.
+
+\begin{figure}[htb]
+
+\centering
+\begin{minipage}{0.7\linewidth}
+ % Start algorithm.
+\begin{algorithm}[H]
+\label{algorithm:example}
+    \setstretch{1.0}
+    \DontPrintSemicolon
+      
+    \KwInput{Your Input}
+    \KwOutput{Your output}
+    \KwData{Testing set $x$}
+    %-----
+    $\sum_{i=1}^{\infty} := 0$ \tcp*{this is a comment.}
+    \tcc{Now this is an if...else conditional loop.}
+    \If{Condition 1}
+    {
+        Do something    \tcp*{this is another comment.}
+        \If{sub-Condition}
+        {
+            Do a lot
+        }
+    }
+    \ElseIf{Condition 2}
+    {
+        Do Otherwise \;
+        \tcc{Now this is a for loop.}
+        \For{sequence}    
+        { 
+        	loop instructions \;
+        }
+    }
+    \Else
+    {
+    	Do the rest
+    }
+        
+    \tcc{Now this is a While loop.}
+    \While{Condition}
+    {
+        Do something\;
+    }
+\caption{Example code}
+\end{algorithm}
+%----- End algorithm
+\end{minipage}
+\end{figure}
+
+\subsection{How Cite?}
+
+In this form \cite{adams1995hitchhiker}.

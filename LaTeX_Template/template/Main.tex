@@ -1,0 +1,121 @@
+\documentclass[10pt]{definitions/template}
+
+
+\Title{Article Template for Corona Why}
+
+% Create a new command for each orcid.
+% To create a new command, the following command must be used:
+% \newcommand{\orcidauthorXY}{0000-0000-000-0000}
+% Where X and Y is a letter between A and Z. Altogether the value for X and Y must be different for each author, since it corresponds to an identifier.
+
+% Example:
+
+% Author 1, uses the identifier AA.
+\newcommand{\orcidauthorAA}{0000-0000-000-0000}
+% Author 2, uses the identifier AB.
+\newcommand{\orcidauthorAB}{0000-0000-000-0000}
+
+% To be able to call this command, you must use the script \orcidXY{}
+
+
+% Authors, for the paper.
+\Author{
+Firstname Lastname $^{1}$ \orcidAA{},
+Firstname Lastname $^{1, 2}$,
+Firstname Lastname $^{1}$ \textsuperscript{\faEnvelopeO} \orcidAB{},
+and
+Firstname Lastname $^{2}$
+}
+
+
+% Affiliations/Addresses.
+\address{%
+\begin{packed_enum}
+    \item[1] Affiliation 1; e-mail@e-mail.com
+    \item[2] Affiliation 2; e-mail@e-mail.com
+    \item[3] Affiliation 3; e-mail@e-mail.com
+    \item[\textsuperscript{\faEnvelopeO}] Corresponding author: info@coronawhy.org
+\end{packed_enum}
+}
+
+% One example and tutorial can be found in http://www.cbs.umn.edu/sites/default/files/public/downloads/Annotated_Nature_abstract.pdf
+\abstract{
+A single paragraph of about 200 or 300 words maximum. For research articles, abstracts should give a pertinent overview of the work. 
+}
+
+% Keywords
+\keyword{
+keyword 1;
+keyword 2;
+keyword 3;
+keyword n.
+}
+
+\dataset{
+Add the corresponding link to the DOI or a link to the dataset that is in a repository (github, gitlab). To get a DOI number for github, please read the following article \url{https://guides.github.com/activities/citable-code/}
+}
+
+\datasetlicense{
+License under which the data set is made available (CC0, CC-BY, CC-BY-SA, CC-BY-NC, etc.)
+}
+
+\keycontribution{
+The breakthroughs or highlights of the manuscript. Authors can write one, two, three or four sentences to describe the most important part of the paper.
+}
+
+
+% Graphical abstract (Optional)
+% If you want to change the figure, you must overwrite the graphical_abstract.png file in the figure folder.
+% If you do not want to add a graphic abstract, you should comment on this command.
+\graphicalabstract{
+A sentence that briefly explains the graphical abstract.
+}
+
+\linenumbers % Remove for publish.
+
+\begin{document}
+
+\maketitle % print the title
+
+
+\input{Introduction}
+
+\input{Materials_and_Method}
+
+\input{Results}
+
+\input{Discussion}
+
+\input{Conclusions}
+
+\acknowledgments{
+In this section you can acknowledge any support given which is not covered by the author contribution or funding sections.
+}
+
+\funding{
+Example 1: ``This research received no external funding''. Example 2: ``This research was funded by ABC.'' and  and ``The APC was funded by ABC''.
+}
+
+\conflictsofinterest{
+Indicate if there is a conflict of interest, in the event that there is no conflict of interest, leave the following sentence: ``The authors declare no conflict of interest.''.
+} 
+
+\authorcontributions{
+Example: The following statements should be used ``Conceptualisation, X.X. and Y.Y.; methodology, X.X.; software, X.X.; validation, X.X., Y.Y. and Z.Z.; formal analysis, X.X.; investigation, X.X.; resources, X.X.; data curation, X.X.; writing--original draft preparation, X.X.; writing--review and editing, X.X.; visualisation, X.X.; supervision, X.X.; project administration, X.X.; funding acquisition, Y.Y.; etc.
+Review the positions or multiple roles that may exist.
+}
+
+\dedication{
+A formal message.
+}
+
+\newpage
+\bibliographystyle{plain}
+\bibliography{references/references}
+
+
+\input{SupplementaryMaterials}
+
+
+
+\end{document}
